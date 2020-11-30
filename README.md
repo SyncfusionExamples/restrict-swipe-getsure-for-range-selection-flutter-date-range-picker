@@ -1,2 +1,1 @@
-# restrict-swipe-getsure-for-range-selection-flutter-date-range-picker
-How to restrict swipe gesture for range selection in Flutter date range picker (SfDateRangePicker)? 
+**[View document in Syncfusion Flutter Knowledge base](https://www.syncfusion.com/kb/12117/how-to-restrict-swipe-gesture-for-range-selection-in-flutter-date-range-picker)**
