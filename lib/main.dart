@@ -20,16 +20,8 @@ class SwipeSelectionPicker extends StatefulWidget {
 }
 
 class SwipeSelectionPickerState extends State<SwipeSelectionPicker> {
-  bool _swipeSelection;
-  String _buttonText;
-
-  @override
-  @override
-  void initState() {
-    _swipeSelection = true;
-    _buttonText='Disable swipe selection';
-    super.initState();
-  }
+  bool _swipeSelection = true;
+  String _buttonText = 'Disable swipe selection';
 
   @override
   Widget build(BuildContext context) {
@@ -38,27 +30,23 @@ class SwipeSelectionPickerState extends State<SwipeSelectionPicker> {
         children: [
           Container(
             padding: const EdgeInsets.only(top: 70),
-            child: RaisedButton(
+            child: MaterialButton(
               child: Text(_buttonText),
               onPressed: () {
                 setState(() {
-                  if(_buttonText=='Disable swipe selection')
-                    {
-                      _buttonText='Enable swipe selection';
-                      _swipeSelection = false;
-                    }
-
-                  else
-                    {
-                      _buttonText='Disable swipe selection';
-                      _swipeSelection = true;
-                    }
+                  if (_buttonText == 'Disable swipe selection') {
+                    _buttonText = 'Enable swipe selection';
+                    _swipeSelection = false;
+                  } else {
+                    _buttonText = 'Disable swipe selection';
+                    _swipeSelection = true;
+                  }
                 });
               },
             ),
           ),
           Card(
-            margin: const EdgeInsets.fromLTRB(40, 80, 40,100),
+            margin: const EdgeInsets.fromLTRB(40, 80, 40, 100),
             child: SfDateRangePicker(
               view: DateRangePickerView.month,
               selectionMode: DateRangePickerSelectionMode.range,
